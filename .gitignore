@@ -17,3 +17,5 @@ QtC-*
 *.files
 *.includes
 *.user
+*.log
+O.*
