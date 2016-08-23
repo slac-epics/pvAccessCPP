@@ -1,0 +1,11 @@
+# Released modules should build w/ this RELEASE.local in directory path with this pattern
+# .../$(EPICS_BASE_VERSION)/modules/ModuleDirName/ModuleVersion
+# We define EPICS_BASE and EPICS_MODULES here
+# .../$(EPICS_BASE_VERSION)/modules/RELEASE.local
+-include $(TOP)/../../RELEASE.local
+
+pvCommonCPP_MODULE_VERSION	= R4.2.0-0.1.0
+pvDataCPP_MODULE_VERSION	= R6.0.0-0.2.0
+
+pvCommonCPP	= $(EPICS_MODULES)/pvCommonCPP/$(pvCommonCPP_MODULE_VERSION)
+pvDataCPP	= $(EPICS_MODULES)/pvDataCPP/$(pvDataCPP_MODULE_VERSION)
