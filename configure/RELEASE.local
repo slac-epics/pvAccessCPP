@@ -20,7 +20,7 @@
 # could match a directory name.
 # ==========================================================
 
-pvCommonCPP_MODULE_VERSION	= R4.2.0-0.1.0
+pvCommonCPP_MODULE_VERSION	= R4.2.0-0.3.0
 pvDataCPP_MODULE_VERSION	= R6.0.0-0.3.0
 
 # ==========================================================
