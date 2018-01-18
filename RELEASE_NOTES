@@ -1,0 +1,15 @@
+#
+# SLAC RELEASE_NOTES
+#
+
+R6.0.0-0.0.1	2018-01-18	bhill
+	Release of 6.0.0 w/ SLAC build support and pvDataCPP/R7.0.0-0.0.1
+
+R5.0.0-0.2.1	2017-04-13	bhill
+	Bumped up to pvCommonCPP/R4.2.0-0.3.0
+
+R5.0.0-0.2.0	2017-03-20	bhill
+	Bumped up to pvDataCPP/R6.0.0-0.3.0 and updated RELEASE.local from latest template
+
+R5.0.0-0.1.0	2016-08-22 bhill
+	Adding RELEASE.local for pvCommonCPP/R4.2.0-0.1.0 and pvDataCPP/R6.0.0-0.1.0
