@@ -2,6 +2,9 @@
 # SLAC RELEASE_NOTES
 #
 
+R6.0.0-0.0.2	2018-01-31	bhill
+	Cherry-picked Michael's fixes for pva provider registration and pvinfo check for NULL channel.
+
 R6.0.0-0.0.1	2018-01-18	bhill
 	Release of 6.0.0 w/ SLAC build support and pvDataCPP/R7.0.0-0.0.1
 
