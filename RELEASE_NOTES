@@ -2,6 +2,9 @@
 # SLAC RELEASE_NOTES
 #
 
+R6.0.0-0.2.0	2018-02-9	bhill
+    Cherry-picked Michael's fix to shutdown PVA server via epicsAtExit()
+
 R6.0.0-0.1.0	2018-02-7	bhill
 	Re-tagged per naming scheme to indicate some src patches since R6.0.0
 R6.0.0-0.0.2	2018-01-31	bhill
