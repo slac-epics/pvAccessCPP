@@ -2,6 +2,9 @@
 # SLAC RELEASE_NOTES
 #
 
+R6.0.0-0.3.0	2018-02-27	bhill
+    Cherry-picked Michael's fix for fairQueue logic error re perpetual clear()
+
 R6.0.0-0.2.0	2018-02-9	bhill
     Cherry-picked Michael's fix to shutdown PVA server via epicsAtExit()
 
