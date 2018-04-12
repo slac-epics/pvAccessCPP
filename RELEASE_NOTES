@@ -2,6 +2,11 @@
 # SLAC RELEASE_NOTES
 #
 
+R6.0.0-0.4.0	2018-04-12	bhill
+    Cherry-picked Michael's fixes:
+		client fix init order leading to *NULL
+		client search: cleanup context pointer handling
+
 R6.0.0-0.3.0	2018-02-27	bhill
     Cherry-picked Michael's fix for fairQueue logic error re perpetual clear()
 
