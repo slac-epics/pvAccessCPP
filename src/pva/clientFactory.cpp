@@ -6,10 +6,10 @@
 
 #include <string>
 
-#include <pv/lock.h>
+#include "pv/lock.h"
 
 #define epicsExportSharedSymbols
-#include <pv/clientFactory.h>
+#include "pv/clientFactory.h"
 
 using namespace epics::pvData;
 using namespace epics::pvAccess;

@@ -5,8 +5,8 @@
  */
 
 #define epicsExportSharedSymbols
-#include <pv/transportRegistry.h>
-#include <pv/logger.h>
+#include "pv/transportRegistry.h"
+#include "pv/logger.h"
 
 namespace pvd = epics::pvData;
 

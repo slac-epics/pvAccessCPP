@@ -12,12 +12,12 @@
 #include <osiSock.h>
 #include <ellLib.h>
 
-#include <pv/pvType.h>
-#include <pv/byteBuffer.h>
-#include <pv/epicsException.h>
+#include "pv/pvType.h"
+#include "pv/byteBuffer.h"
+#include "pv/epicsException.h"
 
 #define epicsExportSharedSymbols
-#include <pv/inetAddressUtil.h>
+#include "pv/inetAddressUtil.h"
 
 using namespace std;
 using namespace epics::pvData;

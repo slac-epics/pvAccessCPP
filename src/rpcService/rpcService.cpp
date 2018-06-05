@@ -5,7 +5,7 @@
  */
 
 #define epicsExportSharedSymbols
-#include <pv/rpcService.h>
+#include "pv/rpcService.h"
 
 namespace pvd = epics::pvData;
 

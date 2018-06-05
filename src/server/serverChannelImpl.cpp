@@ -4,10 +4,10 @@
  * in file LICENSE that is included with this distribution.
  */
 
-#include <pv/reftrack.h>
+#include "pv/reftrack.h"
 
 #define epicsExportSharedSymbols
-#include <pv/serverChannelImpl.h>
+#include "pv/serverChannelImpl.h"
 
 using namespace epics::pvData;
 

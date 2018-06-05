@@ -9,13 +9,13 @@
 #include <epicsThread.h>
 #include <osiSock.h>
 
-#include <pv/epicsException.h>
+#include "pv/epicsException.h"
 
 #define epicsExportSharedSymbols
-#include <pv/blockingTCP.h>
-#include <pv/codec.h>
-#include <pv/remote.h>
-#include <pv/logger.h>
+#include "pv/blockingTCP.h"
+#include "pv/codec.h"
+#include "pv/remote.h"
+#include "pv/logger.h"
 
 using std::ostringstream;
 using namespace epics::pvData;

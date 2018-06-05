@@ -7,10 +7,10 @@
 #include <algorithm>
 
 #define epicsExportSharedSymbols
-#include <pv/beaconEmitter.h>
-#include <pv/serializationHelper.h>
-#include <pv/logger.h>
-#include <pv/serverContextImpl.h>
+#include "pv/beaconEmitter.h"
+#include "pv/serializationHelper.h"
+#include "pv/logger.h"
+#include "pv/serverContextImpl.h"
 
 using namespace std;
 using namespace epics::pvData;

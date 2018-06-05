@@ -11,10 +11,10 @@
 #include <epicsThread.h>
 
 #define epicsExportSharedSymbols
-#include <pv/blockingTCP.h>
-#include <pv/remote.h>
-#include <pv/logger.h>
-#include <pv/codec.h>
+#include "pv/blockingTCP.h"
+#include "pv/remote.h"
+#include "pv/logger.h"
+#include "pv/codec.h"
 
 using namespace epics::pvData;
 

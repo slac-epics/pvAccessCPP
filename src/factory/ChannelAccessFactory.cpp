@@ -11,20 +11,20 @@
 #include <epicsThread.h>
 #include <epicsSignal.h>
 
-#include <pv/lock.h>
-#include <pv/noDefaultMethods.h>
-#include <pv/pvData.h>
-#include <pv/reftrack.h>
-#include <pv/timer.h>
+#include "pv/lock.h"
+#include "pv/noDefaultMethods.h"
+#include "pv/pvData.h"
+#include "pv/reftrack.h"
+#include "pv/timer.h"
 
 #define epicsExportSharedSymbols
-#include <pv/pvAccess.h>
-#include <pv/clientContextImpl.h>
-#include <pv/factory.h>
+#include "pv/pvAccess.h"
+#include "pv/clientContextImpl.h"
+#include "pv/factory.h"
 #include "pv/codec.h"
-#include <pv/serverContextImpl.h>
-#include <pv/serverChannelImpl.h>
-#include <pv/blockingUDP.h>
+#include "pv/serverContextImpl.h"
+#include "pv/serverChannelImpl.h"
+#include "pv/blockingUDP.h"
 
 using namespace epics::pvData;
 using std::string;

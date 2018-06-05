@@ -4,15 +4,15 @@
  * in file LICENSE that is included with this distribution.
  */
 
-#include <pv/serialize.h>
-#include <pv/pvData.h>
-#include <pv/noDefaultMethods.h>
-#include <pv/pvIntrospect.h>
-#include <pv/byteBuffer.h>
+#include "pv/serialize.h"
+#include "pv/pvData.h"
+#include "pv/noDefaultMethods.h"
+#include "pv/pvIntrospect.h"
+#include "pv/byteBuffer.h"
 
 #define epicsExportSharedSymbols
-#include <pv/serializationHelper.h>
-#include <pv/introspectionRegistry.h>
+#include "pv/serializationHelper.h"
+#include "pv/introspectionRegistry.h"
 
 using namespace epics::pvData;
 

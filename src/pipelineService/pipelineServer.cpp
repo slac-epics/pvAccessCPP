@@ -10,8 +10,8 @@
 #include <utility>
 
 #define epicsExportSharedSymbols
-#include <pv/pipelineServer.h>
-#include <pv/wildcard.h>
+#include "pv/pipelineServer.h"
+#include "pv/wildcard.h"
 
 using namespace epics::pvData;
 using namespace std;

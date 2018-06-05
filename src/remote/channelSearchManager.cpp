@@ -8,14 +8,14 @@
 #include <time.h>
 #include <vector>
 
-#include <pv/timeStamp.h>
+#include "pv/timeStamp.h"
 
 #define epicsExportSharedSymbols
-#include <pv/channelSearchManager.h>
-#include <pv/pvaConstants.h>
-#include <pv/blockingUDP.h>
-#include <pv/serializeHelper.h>
-#include <pv/logger.h>
+#include "pv/channelSearchManager.h"
+#include "pv/pvaConstants.h"
+#include "pv/blockingUDP.h"
+#include "pv/serializeHelper.h"
+#include "pv/logger.h"
 
 using namespace std;
 using namespace epics::pvData;

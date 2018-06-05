@@ -5,7 +5,7 @@
  */
 
 #define epicsExportSharedSymbols
-#include <pv/baseChannelRequester.h>
+#include "pv/baseChannelRequester.h"
 
 using namespace epics::pvData;
 using std::string;

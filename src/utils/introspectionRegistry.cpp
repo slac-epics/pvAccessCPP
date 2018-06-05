@@ -5,8 +5,8 @@
  */
 
 #define epicsExportSharedSymbols
-#include <pv/introspectionRegistry.h>
-#include <pv/serializationHelper.h>
+#include "pv/introspectionRegistry.h"
+#include "pv/serializationHelper.h"
 
 using namespace epics::pvData;
 using namespace std;

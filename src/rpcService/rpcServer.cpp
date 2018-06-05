@@ -9,9 +9,9 @@
 #include <utility>
 
 #define epicsExportSharedSymbols
-#include <pv/rpcServer.h>
-#include <pv/serverContextImpl.h>
-#include <pv/wildcard.h>
+#include "pv/rpcServer.h"
+#include "pv/serverContextImpl.h"
+#include "pv/wildcard.h"
 
 using namespace epics::pvData;
 using std::string;

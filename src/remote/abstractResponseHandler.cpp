@@ -8,12 +8,12 @@
 
 #include <osiSock.h>
 
-#include <pv/byteBuffer.h>
-#include <pv/reftrack.h>
+#include "pv/byteBuffer.h"
+#include "pv/reftrack.h"
 
 #define epicsExportSharedSymbols
-#include <pv/remote.h>
-#include <pv/hexDump.h>
+#include "pv/remote.h"
+#include "pv/hexDump.h"
 
 using std::ostringstream;
 using std::hex;

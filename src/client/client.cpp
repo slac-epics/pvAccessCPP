@@ -9,10 +9,10 @@
 #include <epicsGuard.h>
 #include <epicsEvent.h>
 
-#include <pv/pvData.h>
-#include <pv/bitSet.h>
-#include <pv/reftrack.h>
-#include <pv/epicsException.h>
+#include "pv/pvData.h"
+#include "pv/bitSet.h"
+#include "pv/reftrack.h"
+#include "pv/epicsException.h"
 
 #define epicsExportSharedSymbols
 #include "pv/logger.h"

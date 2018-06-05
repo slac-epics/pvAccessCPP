@@ -6,14 +6,14 @@
 
 #include <algorithm>
 
-#include <pv/epicsException.h>
-#include <pv/typeCast.h>
+#include "pv/epicsException.h"
+#include "pv/typeCast.h"
 
 #include <osiSock.h>
 #include <epicsStdlib.h>
 
 #define epicsExportSharedSymbols
-#include <pv/configuration.h>
+#include "pv/configuration.h"
 
 #if defined(__GNUC__) && __GNUC__ < 3
 #define OLDGCC

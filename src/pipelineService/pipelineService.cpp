@@ -5,4 +5,4 @@
  */
 
 #define epicsExportSharedSymbols
-#include <pv/pipelineService.h>
+#include "pv/pipelineService.h"

@@ -5,8 +5,8 @@
  */
 
 #define epicsExportSharedSymbols
-#include <pv/beaconHandler.h>
-#include <pv/transportRegistry.h>
+#include "pv/beaconHandler.h"
+#include "pv/transportRegistry.h"
 
 using namespace std;
 using namespace epics::pvData;

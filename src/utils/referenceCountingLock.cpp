@@ -5,7 +5,7 @@
  */
 
 #define epicsExportSharedSymbols
-#include <pv/referenceCountingLock.h>
+#include "pv/referenceCountingLock.h"
 
 namespace epics {
 namespace pvAccess {

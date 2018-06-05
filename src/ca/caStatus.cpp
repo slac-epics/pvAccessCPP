@@ -5,7 +5,7 @@
  */
 
 #define epicsExportSharedSymbols
-#include <pv/caStatus.h>
+#include "pv/caStatus.h"
 
 namespace epics {
 namespace pvAccess {

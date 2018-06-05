@@ -7,14 +7,14 @@
 
 #include <epicsVersion.h>
 
-#include <pv/standardField.h>
-#include <pv/logger.h>
-#include <pv/pvAccess.h>
-#include <pv/reftrack.h>
+#include "pv/standardField.h"
+#include "pv/logger.h"
+#include "pv/pvAccess.h"
+#include "pv/reftrack.h"
 
 #define epicsExportSharedSymbols
 #include "caChannel.h"
-#include <pv/caStatus.h>
+#include "pv/caStatus.h"
 
 using namespace epics::pvData;
 using std::string;

@@ -24,19 +24,19 @@
 #include <osiSock.h>
 #include <osiProcess.h>
 
-#include <pv/byteBuffer.h>
-#include <pv/timer.h>
+#include "pv/byteBuffer.h"
+#include "pv/timer.h"
 
 #define epicsExportSharedSymbols
-#include <pv/responseHandlers.h>
-#include <pv/remote.h>
-#include <pv/hexDump.h>
-#include <pv/serializationHelper.h>
-#include <pv/logger.h>
-#include <pv/pvAccessMB.h>
-#include <pv/codec.h>
-#include <pv/rpcServer.h>
-#include <pv/securityImpl.h>
+#include "pv/responseHandlers.h"
+#include "pv/remote.h"
+#include "pv/hexDump.h"
+#include "pv/serializationHelper.h"
+#include "pv/logger.h"
+#include "pv/pvAccessMB.h"
+#include "pv/codec.h"
+#include "pv/rpcServer.h"
+#include "pv/securityImpl.h"
 
 using std::string;
 using std::ostringstream;

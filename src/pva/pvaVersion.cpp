@@ -7,7 +7,7 @@
 #include <sstream>
 
 #define epicsExportSharedSymbols
-#include <pv/pvaVersion.h>
+#include "pv/pvaVersion.h"
 
 using std::stringstream;
 using std::string;

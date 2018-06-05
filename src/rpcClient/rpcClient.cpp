@@ -8,15 +8,15 @@
 #include <string>
 
 #include <epicsEvent.h>
-#include <pv/pvData.h>
-#include <pv/event.h>
-#include <pv/current_function.h>
+#include "pv/pvData.h"
+#include "pv/event.h"
+#include "pv/current_function.h"
 
 #define epicsExportSharedSymbols
-#include <pv/pvAccess.h>
-#include <pv/clientFactory.h>
-#include <pv/logger.h>
-#include <pv/rpcService.h>
+#include "pv/pvAccess.h"
+#include "pv/clientFactory.h"
+#include "pv/logger.h"
+#include "pv/rpcService.h"
 
 #include "pv/rpcClient.h"
 

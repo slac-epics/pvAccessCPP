@@ -7,7 +7,7 @@
 #include <epicsString.h>
 
 #define epicsExportSharedSymbols
-#include <pv/wildcard.h>
+#include "pv/wildcard.h"
 
 using namespace epics::pvAccess;
 

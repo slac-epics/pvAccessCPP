@@ -7,10 +7,10 @@
 #include <epicsGuard.h>
 #include <epicsEvent.h>
 
-#include <pv/current_function.h>
-#include <pv/pvData.h>
-#include <pv/bitSet.h>
-#include <pv/epicsException.h>
+#include "pv/current_function.h"
+#include "pv/pvData.h"
+#include "pv/bitSet.h"
+#include "pv/epicsException.h"
 
 #define epicsExportSharedSymbols
 #include "pv/logger.h"

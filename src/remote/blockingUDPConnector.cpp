@@ -9,9 +9,9 @@
 #include <osiSock.h>
 
 #define epicsExportSharedSymbols
-#include <pv/blockingUDP.h>
-#include <pv/remote.h>
-#include <pv/logger.h>
+#include "pv/blockingUDP.h"
+#include "pv/remote.h"
+#include "pv/logger.h"
 
 using namespace std;
 using namespace epics::pvData;

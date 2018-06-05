@@ -6,11 +6,11 @@
 
 #include <epicsMutex.h>
 #include <epicsGuard.h>
-#include <pv/reftrack.h>
-#include <pv/valueBuilder.h>
+#include "pv/reftrack.h"
+#include "pv/valueBuilder.h"
 
 #define epicsExportSharedSymbols
-#include <pv/pvAccess.h>
+#include "pv/pvAccess.h"
 
 namespace pvd = epics::pvData;
 

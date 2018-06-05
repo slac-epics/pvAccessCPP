@@ -7,7 +7,7 @@
 #include <osiProcess.h>
 
 #define epicsExportSharedSymbols
-#include <pv/securityImpl.h>
+#include "pv/securityImpl.h"
 
 using namespace epics::pvData;
 using namespace epics::pvAccess;

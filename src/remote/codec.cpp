@@ -17,24 +17,24 @@
 #include <epicsThread.h>
 #include <epicsVersion.h>
 
-#include <pv/byteBuffer.h>
-#include <pv/pvType.h>
-#include <pv/lock.h>
-#include <pv/timer.h>
-#include <pv/event.h>
-#include <pv/reftrack.h>
+#include "pv/byteBuffer.h"
+#include "pv/pvType.h"
+#include "pv/lock.h"
+#include "pv/timer.h"
+#include "pv/event.h"
+#include "pv/reftrack.h"
 
 #define epicsExportSharedSymbols
-#include <pv/blockingTCP.h>
-#include <pv/remote.h>
-#include <pv/inetAddressUtil.h>
-#include <pv/hexDump.h>
-#include <pv/logger.h>
-#include <pv/likely.h>
-#include <pv/codec.h>
-#include <pv/serializationHelper.h>
-#include <pv/serverChannelImpl.h>
-#include <pv/clientContextImpl.h>
+#include "pv/blockingTCP.h"
+#include "pv/remote.h"
+#include "pv/inetAddressUtil.h"
+#include "pv/hexDump.h"
+#include "pv/logger.h"
+#include "pv/likely.h"
+#include "pv/codec.h"
+#include "pv/serializationHelper.h"
+#include "pv/serverChannelImpl.h"
+#include "pv/clientContextImpl.h"
 
 using namespace std;
 using namespace epics::pvData;

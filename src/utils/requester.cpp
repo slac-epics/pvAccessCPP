@@ -12,10 +12,10 @@
 
 #include <epicsMutex.h>
 
-#include <pv/lock.h>
+#include "pv/lock.h"
 
 #define epicsExportSharedSymbols
-#include <pv/requester.h>
+#include "pv/requester.h"
 
 using std::string;
 

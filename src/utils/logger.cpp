@@ -14,12 +14,12 @@
 #include <errlog.h>
 #include <epicsTime.h>
 
-#include <pv/noDefaultMethods.h>
-#include <pv/lock.h>
-#include <pv/pvType.h>
+#include "pv/noDefaultMethods.h"
+#include "pv/lock.h"
+#include "pv/pvType.h"
 
 #define epicsExportSharedSymbols
-#include <pv/logger.h>
+#include "pv/logger.h"
 
 using namespace epics::pvData;
 using std::ofstream;

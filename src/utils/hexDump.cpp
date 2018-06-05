@@ -9,7 +9,7 @@
 #include <string>
 
 #define epicsExportSharedSymbols
-#include <pv/hexDump.h>
+#include "pv/hexDump.h"
 
 using namespace epics::pvData;
 using std::string;

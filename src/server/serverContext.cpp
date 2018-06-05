@@ -6,17 +6,17 @@
 
 #include <epicsSignal.h>
 
-#include <pv/lock.h>
-#include <pv/timer.h>
-#include <pv/thread.h>
-#include <pv/reftrack.h>
+#include "pv/lock.h"
+#include "pv/timer.h"
+#include "pv/thread.h"
+#include "pv/reftrack.h"
 
 #define epicsExportSharedSymbols
-#include <pv/responseHandlers.h>
-#include <pv/logger.h>
-#include <pv/serverContextImpl.h>
-#include <pv/codec.h>
-#include <pv/security.h>
+#include "pv/responseHandlers.h"
+#include "pv/logger.h"
+#include "pv/serverContextImpl.h"
+#include "pv/codec.h"
+#include "pv/security.h"
 
 using namespace std;
 using namespace epics::pvData;

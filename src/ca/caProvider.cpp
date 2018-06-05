@@ -10,13 +10,13 @@
 #include <epicsSignal.h>
 #include <epicsThread.h>
 #include <epicsExit.h>
-#include <pv/logger.h>
-#include <pv/configuration.h>
-#include <pv/pvAccess.h>
-#include <pv/reftrack.h>
+#include "pv/logger.h"
+#include "pv/configuration.h"
+#include "pv/pvAccess.h"
+#include "pv/reftrack.h"
 
 #define epicsExportSharedSymbols
-#include <pv/caProvider.h>
+#include "pv/caProvider.h"
 #include "caProviderPvt.h"
 #include "caChannel.h"
 

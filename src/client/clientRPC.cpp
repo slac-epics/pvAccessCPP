@@ -6,9 +6,9 @@
 #include <epicsMutex.h>
 #include <epicsGuard.h>
 
-#include <pv/pvData.h>
-#include <pv/bitSet.h>
-#include <pv/reftrack.h>
+#include "pv/pvData.h"
+#include "pv/bitSet.h"
+#include "pv/reftrack.h"
 
 #define epicsExportSharedSymbols
 #include "pv/logger.h"
