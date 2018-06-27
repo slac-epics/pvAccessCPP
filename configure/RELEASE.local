@@ -20,14 +20,12 @@
 # could match a directory name.
 # ==========================================================
 
-#pvCommonCPP_MODULE_VERSION	= R4.2.0-0.3.0
-pvDataCPP_MODULE_VERSION	= R7.1.0-0.0.1
+PVDATACPP_MODULE_VERSION	= R7.1.0-0.0.1
 
 # ==========================================================
 # Define module paths using pattern
 # ==========================================================
-#pvCommonCPP	= $(EPICS_MODULES)/pvCommonCPP/$(pvCommonCPP_MODULE_VERSION)
-pvDataCPP	= $(EPICS_MODULES)/pvDataCPP/$(pvDataCPP_MODULE_VERSION)
+PVDATACPP	= $(EPICS_MODULES)/pvDataCPP/$(PVDATACPP_MODULE_VERSION)
 
 # Set EPICS_BASE last so it appears last in the DB, DBD, INCLUDE, and LIB search paths
 EPICS_BASE              = $(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
