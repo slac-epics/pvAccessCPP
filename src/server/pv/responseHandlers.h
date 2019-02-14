@@ -222,6 +222,7 @@ private:
     std::tr1::weak_ptr<detail::BlockingServerTCPTransportCodec> _transport;
     const std::string _channelName;
     const pvAccessID _cid;
+    bool _created;
     epics::pvData::Status _status;
     epics::pvData::Mutex _mutex;
 };

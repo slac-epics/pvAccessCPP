@@ -803,8 +803,7 @@ ServerChannelRequesterImpl::ServerChannelRequesterImpl(const Transport::shared_p
     _transport(std::tr1::static_pointer_cast<detail::BlockingServerTCPTransportCodec>(transport)),
     _channelName(channelName),
     _cid(cid),
-    _status(),
-    _mutex()
+    _created(false)
 {
 }
 
@@ -822,6 +821,8 @@ ChannelRequester::shared_pointer ServerChannelRequesterImpl::create(
 
 void ServerChannelRequesterImpl::channelCreated(const Status& status, Channel::shared_pointer const & channel)
 {
+    if(_created)
+        throw std::logic_error("Channel already created");
     if(detail::BlockingServerTCPTransportCodec::shared_pointer transport = _transport.lock())
     {
         ServerChannel::shared_pointer serverChannel;
@@ -853,6 +854,7 @@ void ServerChannelRequesterImpl::channelCreated(const Status& status, Channel::s
                 Lock guard(_mutex);
                 _status = status;
                 _serverChannel = serverChannel;
+                _created = true;
             }
 
             TransportSender::shared_pointer thisSender = shared_from_this();
@@ -891,6 +893,7 @@ void ServerChannelRequesterImpl::channelStateChange(Channel::shared_pointer cons
         ServerChannel::shared_pointer channel;
         {
             Lock guard(_mutex);
+            _created = false;
             channel= dynamic_pointer_cast<ServerChannel>(_serverChannel.lock());
         }
 
