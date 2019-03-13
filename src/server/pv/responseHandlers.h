@@ -283,7 +283,6 @@ public:
 class ServerChannelGetRequesterImpl :
     public BaseChannelRequester,
     public ChannelGetRequester,
-    public TransportSender,
     public std::tr1::enable_shared_from_this<ServerChannelGetRequesterImpl>
 {
 public:
@@ -340,7 +339,6 @@ public:
 class ServerChannelPutRequesterImpl :
     public BaseChannelRequester,
     public ChannelPutRequester,
-    public TransportSender,
     public std::tr1::enable_shared_from_this<ServerChannelPutRequesterImpl>
 {
 public:
@@ -399,7 +397,6 @@ public:
 class ServerChannelPutGetRequesterImpl :
     public BaseChannelRequester,
     public ChannelPutGetRequester,
-    public TransportSender,
     public std::tr1::enable_shared_from_this<ServerChannelPutGetRequesterImpl>
 {
 public:
@@ -469,7 +466,6 @@ public:
 class ServerMonitorRequesterImpl :
     public BaseChannelRequester,
     public MonitorRequester,
-    public TransportSender,
     public std::tr1::enable_shared_from_this<ServerMonitorRequesterImpl>
 {
 public:
@@ -535,7 +531,6 @@ public:
 class ServerChannelArrayRequesterImpl :
     public BaseChannelRequester,
     public ChannelArrayRequester,
-    public TransportSender,
     public std::tr1::enable_shared_from_this<ServerChannelArrayRequesterImpl>
 {
 public:
@@ -644,7 +639,6 @@ public:
 class ServerChannelProcessRequesterImpl :
     public BaseChannelRequester,
     public ChannelProcessRequester,
-    public TransportSender,
     public std::tr1::enable_shared_from_this<ServerChannelProcessRequesterImpl>
 {
 public:
@@ -698,7 +692,6 @@ private:
 class ServerGetFieldRequesterImpl :
     public BaseChannelRequester,
     public GetFieldRequester,
-    public TransportSender,
     public std::tr1::enable_shared_from_this<ServerGetFieldRequesterImpl>
 {
 public:
@@ -763,7 +756,6 @@ public:
 class ServerChannelRPCRequesterImpl :
     public BaseChannelRequester,
     public ChannelRPCRequester,
-    public TransportSender,
     public std::tr1::enable_shared_from_this<ServerChannelRPCRequesterImpl>
 {
 public:

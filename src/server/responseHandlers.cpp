@@ -24,6 +24,7 @@
 #include <osiSock.h>
 #include <osiProcess.h>
 #include <epicsAssert.h>
+#include <epicsAtomic.h>
 
 #include <pv/byteBuffer.h>
 #include <pv/timer.h>
@@ -1055,6 +1056,7 @@ void ServerGetHandler::handleResponse(osiSockAddr* responseFrom,
             BaseChannelRequester::sendFailureMessage((int8)CMD_GET, transport, ioid, qosCode, BaseChannelRequester::badIOIDStatus);
             return;
         }
+        atomic::add(request->bytesRX, payloadSize);
 
         if (!request->startRequest(qosCode))
         {
@@ -1291,6 +1293,7 @@ void ServerPutHandler::handleResponse(osiSockAddr* responseFrom,
             BaseChannelRequester::sendFailureMessage((int8)CMD_PUT, transport, ioid, qosCode, BaseChannelRequester::badIOIDStatus);
             return;
         }
+        atomic::add(request->bytesRX, payloadSize);
 
         if (!request->startRequest(qosCode))
         {
@@ -1530,6 +1533,7 @@ void ServerPutGetHandler::handleResponse(osiSockAddr* responseFrom,
             BaseChannelRequester::sendFailureMessage((int8)CMD_PUT_GET, transport, ioid, qosCode, BaseChannelRequester::badIOIDStatus);
             return;
         }
+        atomic::add(request->bytesRX, payloadSize);
 
         if (!request->startRequest(qosCode))
         {
@@ -1824,6 +1828,7 @@ void ServerMonitorHandler::handleResponse(osiSockAddr* responseFrom,
             BaseChannelRequester::sendFailureMessage((int8)CMD_MONITOR, transport, ioid, qosCode, BaseChannelRequester::badIOIDStatus);
             return;
         }
+        atomic::add(request->bytesRX, payloadSize);
 
         if (ack)
         {
@@ -2157,6 +2162,7 @@ void ServerArrayHandler::handleResponse(osiSockAddr* responseFrom,
             BaseChannelRequester::sendFailureMessage((int8)CMD_ARRAY, transport, ioid, qosCode, BaseChannelRequester::badIOIDStatus);
             return;
         }
+        atomic::add(request->bytesRX, payloadSize);
 
         if (!request->startRequest(qosCode))
         {
@@ -2418,6 +2424,7 @@ void ServerDestroyRequestHandler::handleResponse(osiSockAddr* responseFrom,
         failureResponse(transport, ioid, BaseChannelRequester::badIOIDStatus);
         return;
     }
+    // atomic::add(request->bytesRX, payloadSize);
 
     // destroy
     request->destroy();
@@ -2458,6 +2465,7 @@ void ServerCancelRequestHandler::handleResponse(osiSockAddr* responseFrom,
         failureResponse(transport, ioid, BaseChannelRequester::badIOIDStatus);
         return;
     }
+    //atomic::add(request->bytesRX, payloadSize);
 
     ChannelRequest::shared_pointer cr = dynamic_pointer_cast<ChannelRequest>(request->getOperation());
     if (!cr)
@@ -2517,6 +2525,7 @@ void ServerProcessHandler::handleResponse(osiSockAddr* responseFrom,
             BaseChannelRequester::sendFailureMessage((int8)CMD_PROCESS, transport, ioid, qosCode, BaseChannelRequester::badIOIDStatus);
             return;
         }
+        atomic::add(request->bytesRX, payloadSize);
 
         if (!request->startRequest(qosCode))
         {
@@ -2757,6 +2766,7 @@ void ServerRPCHandler::handleResponse(osiSockAddr* responseFrom,
             BaseChannelRequester::sendFailureMessage((int8)CMD_RPC, transport, ioid, qosCode, BaseChannelRequester::badIOIDStatus);
             return;
         }
+        atomic::add(request->bytesRX, payloadSize);
 
         if (!request->startRequest(qosCode))
         {
