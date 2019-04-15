@@ -2799,8 +2799,6 @@ public:
     {
         AbstractClientResponseHandler::handleResponse(responseFrom, transport, version, command, payloadSize, payloadBuffer);
 
-        transport->setRemoteRevision(version);
-
         transport->ensureData(4+2);
 
         transport->setRemoteTransportReceiveBufferSize(payloadBuffer->getInt());

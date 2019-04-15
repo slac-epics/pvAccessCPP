@@ -290,6 +290,9 @@ private:
     epics::pvData::int8 _byteOrderFlag;
     epics::pvData::int8 _clientServerFlag;
     const size_t _socketSendBufferSize;
+
+public:
+    mutable epics::pvData::Mutex _mutex;
 };
 
 
@@ -360,9 +363,10 @@ public:
         return _socketName;
     }
 
-    virtual epics::pvData::int8 getRevision() const OVERRIDE FINAL {
-        return PVA_PROTOCOL_REVISION < _remoteTransportRevision
-                ? PVA_PROTOCOL_REVISION : _remoteTransportRevision;
+    epics::pvData::int8 getRevision() const {
+        epicsGuard<epicsMutex> G(_mutex);
+        return PVA_PROTOCOL_REVISION < _version
+                ? PVA_PROTOCOL_REVISION : _version;
     }
 
 
@@ -373,11 +377,6 @@ public:
 
     virtual epics::pvData::int16 getPriority() const OVERRIDE FINAL {
         return _priority;
-    }
-
-
-    virtual void setRemoteRevision(epics::pvData::int8 revision) OVERRIDE FINAL {
-        _remoteTransportRevision = revision;
     }
 
 
@@ -468,15 +467,11 @@ private:
 
     ResponseHandler::shared_pointer _responseHandler;
     size_t _remoteTransportReceiveBufferSize;
-    epics::pvData::int8 _remoteTransportRevision;
     epics::pvData::int16 _priority;
 
 protected:
     bool _verified;
     epics::pvData::Event _verifiedEvent;
-
-public:
-    mutable epics::pvData::Mutex _mutex;
 };
 
 class BlockingServerTCPTransportCodec :
