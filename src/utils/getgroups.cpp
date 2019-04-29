@@ -1,4 +1,10 @@
 
+// On Mac, bypass limit of 16 groups.
+// make sure this is set before including any headers
+#ifndef _DARWIN_UNLIMITED_GETGROUPS
+#  define _DARWIN_UNLIMITED_GETGROUPS
+#endif
+
 #include <set>
 
 #if defined(_WIN32)
@@ -58,12 +64,12 @@ void osdGetRoles(const std::string& account, PeerInfo::roles_t& roles)
         std::vector<osi_gid_t> gtemp(16);
         int gcount = int(gtemp.size());
 
-        if(getgrouplist(user->pw_name, user->pw_gid, &gtemp[0], &gcount)==-1 && gcount>=0 && gcount<=NGROUPS_MAX) {
+        if(getgrouplist(user->pw_name, user->pw_gid, &gtemp[0], &gcount)==-1 && gcount>=0) {
             gtemp.resize(gcount);
             // try again.  This time if we fail, then there is some other error
             getgrouplist(user->pw_name, user->pw_gid, &gtemp[0], &gcount);
         }
-        gtemp.resize(std::min(gcount, NGROUPS_MAX));
+        gtemp.resize(std::max(0, gcount));
 
         for(size_t i=0, N=gtemp.size(); i<N; i++)
             gids.insert(gtemp[i]);
