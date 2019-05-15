@@ -2,6 +2,9 @@
 # SLAC RELEASE_NOTES
 #
 
+R6.1.0-0.2.0	2019-05-15	Bruce Hill
+	Updated branch from final 6.1.0 release
+
 R6.1.0-0.1.0	2018-06-4	bhill
 	Based on tag 6.1.0-pre1 which fixes several crashes.
 	Added SLAC RELEASE.local
