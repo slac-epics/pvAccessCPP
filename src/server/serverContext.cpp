@@ -279,6 +279,21 @@ void ServerContextImpl::initialize()
     initializeUDPTransports(true, _udpTransports, _ifaceList, _responseHandler, _broadcastTransport,
                             _broadcastPort, _autoBeaconAddressList, _beaconAddressList, _ignoreAddressList);
 
+    _beaconAddressList.clear();
+
+    for(size_t i=0; i<_udpTransports.size(); i++) {
+
+        const InetAddrVector& addrs = _udpTransports[i]->getSendAddresses();
+
+        for(size_t j=0; j<addrs.size(); j++) {
+            char buf[30];
+            sockAddrToA(&addrs[j].sa, buf, sizeof(buf));
+            if(!_beaconAddressList.empty())
+                _beaconAddressList.push_back(' ');
+            _beaconAddressList += buf;
+        }
+    }
+
     _beaconEmitter.reset(new BeaconEmitter("tcp", _broadcastTransport, thisServerContext));
 
     _beaconEmitter->start();
