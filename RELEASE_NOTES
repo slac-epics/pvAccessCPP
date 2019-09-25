@@ -1,0 +1,43 @@
+#
+# SLAC RELEASE_NOTES
+#
+R7.0.0-0.1.0
+	7.0.0 plus SLAC build support
+	Tweak pvlist output to make it easier to cut/paste w/o picking up irrelevant syntax
+
+R6.1.0-0.2.0	2019-05-15	Bruce Hill
+	Updated branch from final 6.1.0 release
+
+R6.1.0-0.1.0	2018-06-4	bhill
+	Based on tag 6.1.0-pre1 which fixes several crashes.
+	Added SLAC RELEASE.local
+	Tweak pvlist output to make it easier to cut/paste w/o picking up irrelevant syntax
+	Changed all #include <pv/XXX.h> to use quotes.
+
+R6.0.0-0.4.0	2018-04-12	bhill
+    Cherry-picked Michael's fixes:
+		client fix init order leading to *NULL
+		client search: cleanup context pointer handling
+
+R6.0.0-0.3.0	2018-02-27	bhill
+    Cherry-picked Michael's fix for fairQueue logic error re perpetual clear()
+
+R6.0.0-0.2.0	2018-02-9	bhill
+    Cherry-picked Michael's fix to shutdown PVA server via epicsAtExit()
+
+R6.0.0-0.1.0	2018-02-7	bhill
+	Re-tagged per naming scheme to indicate some src patches since R6.0.0
+R6.0.0-0.0.2	2018-01-31	bhill
+	Cherry-picked Michael's fixes for pva provider registration and pvinfo check for NULL channel.
+
+R6.0.0-0.0.1	2018-01-18	bhill
+	Release of 6.0.0 w/ SLAC build support and pvDataCPP/R7.0.0-0.0.1
+
+R5.0.0-0.2.1	2017-04-13	bhill
+	Bumped up to pvCommonCPP/R4.2.0-0.3.0
+
+R5.0.0-0.2.0	2017-03-20	bhill
+	Bumped up to pvDataCPP/R6.0.0-0.3.0 and updated RELEASE.local from latest template
+
+R5.0.0-0.1.0	2016-08-22 bhill
+	Adding RELEASE.local for pvCommonCPP/R4.2.0-0.1.0 and pvDataCPP/R6.0.0-0.1.0
