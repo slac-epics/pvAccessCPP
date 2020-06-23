@@ -1,0 +1,19 @@
+# CONFIG_SITE.local
+
+# Make any site-specific changes to the EPICS build
+#   configuration variables in this file.
+#
+
+# Set this when you only want to compile this application
+#   for a subset of the cross-compiled target architectures
+#   that Base is built for.
+#CROSS_COMPILER_TARGET_ARCHS = vxWorks-68040
+CROSS_COMPILER_TARGET_ARCHS = 
+ifeq '$(EPICS_HOST_ARCH)' 'rhel6-x86_64'
+CROSS_COMPILER_TARGET_ARCHS = linuxRT-x86_64
+endif
+
+# To install files into a location other than $(TOP) define
+#   INSTALL_LOCATION here.
+#INSTALL_LOCATION=</path/name/to/install/top>
+
