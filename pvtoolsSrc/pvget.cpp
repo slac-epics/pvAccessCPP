@@ -80,6 +80,8 @@ struct Getter : public pvac::ClientChannel::GetCallback, public Tracker
             haderror = 1;
             break;
         case pvac::GetEvent::Cancel:
+            // setw(24) matches the value in printer.cpp for the timestamp field
+            std::cerr<<std::setw(24)<<""<<" *** Not connected\n";
             break;
         case pvac::GetEvent::Success: {
             pvd::PVStructure::Formatter fmt(event.value->stream()
@@ -422,7 +424,6 @@ int MAIN (int argc, char *argv[])
                         Tracker::doneEvt.wait();
                     else if(!Tracker::doneEvt.wait(timeout)) {
                         haderror = 1;
-                        std::cerr<<"Timeout\n";
                         break;
                     }
                 }
