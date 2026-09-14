@@ -40,3 +40,9 @@
 -include $(TOP)/../RELEASE.local
 -include $(TOP)/../RELEASE.$(EPICS_HOST_ARCH).local
 -include $(TOP)/configure/RELEASE.local
+
+# RELEASE.external sets EPICS_BASE, which is bad news for EPICS base integrated builds
+ifeq ($(wildcard $(TOP)/../CONFIG_SITE.local),)
+$(info Out of base build detected)
+-include $(TOP)/configure/RELEASE.external
+endif
